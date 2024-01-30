@@ -12,10 +12,11 @@ function App() {
         <>
             <BrowserRouter>
                 <div className="App">
+                    <Header />
                     <Routes>
                         <Route path="/" element={<Items/>} />
-                        <Route path="/todo" element={<Items/>} />
-                        <Route path="/done" element={<Items/>} />
+                        <Route path="/todo" element={<Items endpoint="?status=todo"/>} />
+                        <Route path="/done" element={<Items endpoint="?status=done"/>} />
                         <Route path="/create_item" element={<CreateItem/>} />
                     </Routes>
                 </div>
